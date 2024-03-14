@@ -12,7 +12,7 @@ def get_database_connection():
 def get_all_movies():
     conn = get_database_connection()
     cursor = conn.cursor()
-    cursor.execute('SELECT title, release_year FROM Filmer')
+    cursor.execute('SELECT image_url, title, release_year FROM Filmer')
     data = cursor.fetchall()
     conn.close()
     return data
