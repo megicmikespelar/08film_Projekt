@@ -13,9 +13,15 @@ def get_all_movies():
     conn = get_database_connection()
     cursor = conn.cursor()
     cursor.execute('SELECT image_url, title, release_year FROM Filmer')
-    data = cursor.fetchall()
+    movies = []
+    for row in cursor.fetchall():
+        movies.append({
+            "image_url": row[0],
+            "title": row[1],
+            "release_year": row[2]
+        })
     conn.close()
-    return data
+    return movies
 
 def get_all_directors():
     conn = get_database_connection()
