@@ -1,18 +1,10 @@
-body {
-  display: grid;
-  grid-template-columns: auto 0px; 
-}
-
-.top {
+.backtotop {
   --offset: 50px; 
 
   position: sticky;
-  bottom: 20px;      
+  top: 0; 
   margin-right: 10px; 
   place-self: end;
-  margin-top: calc(100vh + var(--offset));
-
-  /* visual styling */
   text-decoration: none;
   padding: 10px;
   font-family: sans-serif;
@@ -20,8 +12,4 @@ body {
   background: #000;
   border-radius: 100px;
   white-space: nowrap;
-}
-
-p {
-  font-size: 25px;
 }
