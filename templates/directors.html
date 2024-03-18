@@ -26,24 +26,25 @@
                         <li class="nav-item">
                             <a class="nav-link" href="http://127.0.0.1:8001/directors?">Directors</a>
                         </li>
-                       
+
                     </ul>
                     <span class="navbar-text">
-                      
+
                     </span>
                 </div>
             </div>
         </nav>
     </header>
     <table border="1">
-        {% for row in directors %}
+        {% for director in directors %}
         <tr>
-            {% for item in row %}
-            <td> {{ item }} </td>
-            {% endfor %}
+            <td> <img src="{{ director.image_url }}" alt="{{ director.Namn }}" wdith="250px" height="300px"></td>
+            <td>{{ director.Namn }}</td>
+
         </tr>
         {% endfor %}
     </table>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
         </script>
