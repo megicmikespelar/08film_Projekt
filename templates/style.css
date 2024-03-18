@@ -13,3 +13,14 @@
   border-radius: 100px;
   white-space: nowrap;
 }
+
+
+.movie-title {
+  font-weight: bold;
+  color: #333333;
+}
+
+td:nth-child(3) {
+  color: #666666; /* Färg på release-året */
+  font-style: italic; /* Gör texten kursiv */
+}
