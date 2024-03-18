@@ -18,3 +18,10 @@
   white-space: nowrap;
 }
 
+/* Styla text bredvid bilderna */
+.movie-title {
+    font-size: 18px; /* Storlek på texten */
+    font-weight: bold; /* Gör texten fetstilt */
+    color: #333333; /* Färg på texten */
+    margin-left: 10px; /* Marginal till vänster om texten för att separera från bilden */
+}
