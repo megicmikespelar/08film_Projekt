@@ -26,8 +26,13 @@ def get_all_movies():
 def get_all_directors():
     conn = get_database_connection()
     cursor = conn.cursor()
-    cursor.execute('SELECT Namn FROM Regissorer')
-    data = cursor.fetchall()
+    cursor.execute('SELECT image_url ,Namn FROM Regissorer')
+    data = []
+    for row in cursor.fetchall():
+        data.append({
+            "image_url": row[0],
+            "Namn": row[1],
+        })
     conn.close()
     return data
     
