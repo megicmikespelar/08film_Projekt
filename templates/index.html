@@ -48,8 +48,8 @@
         {% for movie in movies %}
         <tr>
             <td><img src="{{ movie.image_url }}" alt="{{ movie.title }}" width="250px" height="300px"></td>
-            <td class="fw-bold text-center align-top">{{ movie.title }}</td>
-            <td class="text-center align-top">{{ movie.release_year }}</td>
+            <td class="movie_title">{{ movie.title }}</td>
+            <td class="release_year">{{ movie.release_year }}</td>
         </tr>
         {% endfor %}
     </table>
