@@ -23,7 +23,7 @@
 }
 
 /* Styla text bredvid bilderna */
-.movie-title {
+.movie_title {
     font-size: 18px; /* Storlek på texten */
     font-weight: bold; /* Gör texten fetstilt */
     color: #333333; /* Färg på texten */
