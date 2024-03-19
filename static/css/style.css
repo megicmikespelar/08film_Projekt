@@ -24,10 +24,9 @@
 
 /* Styla text bredvid bilderna */
 .movie_title {
-    font-size: 18px; /* Storlek på texten */
+    font-size: 36px; /* Storlek på texten */
     font-weight: bold; /* Gör texten fetstilt */
     color: #333333; /* Färg på texten */
-    margin-left: 10px; /* Marginal till vänster om texten för att separera från bilden */
 }
 
 
@@ -50,3 +49,4 @@
 #myBtn:hover {
   background-color: #555; /* Add a dark-grey background on hover */
 }
+
