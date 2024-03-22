@@ -57,3 +57,6 @@
   background-color: #dcdcdc; /* Add a dark-grey background on hover */
 }
 
+header nav {
+  background-color: black;
+}
