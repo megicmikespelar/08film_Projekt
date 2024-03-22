@@ -27,5 +27,5 @@ mybutton.style.display = showButtonFromStorage ? "block" : "none";
 window.onscroll = updateButtonVisibility;
 
 $("myBtn").click(function(){
-  $("p").slideDown();
+  $("button").slideDown();
 });
