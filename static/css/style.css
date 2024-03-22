@@ -29,6 +29,12 @@
     color: #333333; /* Färg på texten */
 }
 
+.release_year {
+    font-size: 30px; /* Storlek på texten */
+    font-weight: bold; /* Gör texten fetstilt */
+    color: #333333; /* Färg på texten */
+}
+
 
 #myBtn {
   position: fixed;
