@@ -7,7 +7,7 @@ function getScrollPosition() {
 
 function updateButtonVisibility() {
   const scrollPosition = getScrollPosition();
-  const showButton = scrollPosition > 40;
+  const showButton = scrollPosition > 400;
   mybutton.style.display = showButton ? "block" : "none";
 
   // Store the visibility state in local storage
