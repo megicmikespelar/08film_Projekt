@@ -26,5 +26,6 @@ mybutton.style.display = showButtonFromStorage ? "block" : "none";
 // Update button visibility on scroll
 window.onscroll = updateButtonVisibility;
 
-// Update button visibility on button click (optional)
-// mybutton.addEventListener("click", updateButtonVisibility);
+$("myBtn").click(function(){
+  $("p").slideDown();
+});
