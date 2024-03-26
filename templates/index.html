@@ -40,10 +40,20 @@
 
 
     <div class="subsection">
+        <h1 id="rubrik">Top 10 filmer</h1>
+        <h3 id="underrubrik">Vald av Linus</h3>
 
     </div>
-
-
+<div>
+    <h1>Movies</h1>
+    <form action="/">
+        Sort by:
+        <select name="sort_by">
+            <option value="title" {% if sort_by == 'title' %}selected{% endif %}>Title</option>
+            <option value="release_year" {% if sort_by == 'release_year' %}selected{% endif %}>Release Year</option>
+        </select>
+        <button type="submit">Sort</button>
+    </form>
     <table border="1">
         {% for movie in movies %}
         <tr class="table">
@@ -53,7 +63,7 @@
         </tr>
         {% endfor %}
     </table>
-
+</div>
     <button onclick="topFunction()" id="myBtn" title="Go to top">Back to top &#8593;</button>
 
 
