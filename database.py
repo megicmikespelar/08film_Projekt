@@ -17,6 +17,8 @@ def get_all_movies(sort_by=None):
         cursor.execute('SELECT image_url, title, release_year  FROM Filmer ORDER BY title')
     elif sort_by == 'release_year':
         cursor.execute('SELECT image_url, title, release_year FROM Filmer ORDER BY release_year')
+    elif sort_by == 'rating':
+        cursor.execute('SELECT image_url, title, release_year FROM Filmer')
     else:
         cursor.execute('SELECT image_url, title, release_year FROM Filmer')
 
