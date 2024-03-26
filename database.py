@@ -9,10 +9,17 @@ def get_database_connection():
     database_path = os.path.join(os.getcwd(), 'databas.db')
     return sqlite3.connect(database_path)
 
-def get_all_movies():
+def get_all_movies(sort_by=None):
     conn = get_database_connection()
     cursor = conn.cursor()
-    cursor.execute('SELECT image_url, title, release_year FROM Filmer')
+
+    if sort_by == 'title':
+        cursor.execute('SELECT image_url, title, release_year  FROM Filmer ORDER BY title')
+    elif sort_by == 'release_year':
+        cursor.execute('SELECT image_url, title, release_year FROM Filmer ORDER BY release_year')
+    else:
+        cursor.execute('SELECT image_url, title, release_year FROM Filmer')
+
     movies = []
     for row in cursor.fetchall():
         movies.append({

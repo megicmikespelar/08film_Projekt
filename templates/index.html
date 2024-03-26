@@ -46,23 +46,26 @@
     </div>
 <div>
     <h1>Movies</h1>
-    <form action="/">
-        Sort by:
-        <select name="sort_by">
-            <option value="title" {% if sort_by == 'title' %}selected{% endif %}>Title</option>
-            <option value="release_year" {% if sort_by == 'release_year' %}selected{% endif %}>Release Year</option>
-        </select>
-        <button type="submit">Sort</button>
-    </form>
-    <table border="1">
-        {% for movie in movies %}
-        <tr class="table">
-            <td><img src="{{ movie.image_url }}" alt="{{ movie.title }}" width="250px" height="300px"></td>
-            <td class="movie_title">{{ movie.title }}</td>
-            <td class="release_year">{{ movie.release_year }}</td>
-        </tr>
-        {% endfor %}
-    </table>
+<form action="/" method="GET">
+    Sort by:
+    <select name="sort_by">
+        <option value="title" {% if sort_by == 'title' %}selected{% endif %}>Title</option>
+        <option value="release_year" {% if sort_by == 'release_year' %}selected{% endif %}>Release Year</option>
+        <option value="director" {% if sort_by == 'director' %}selected{% endif %}>Rating</option>
+    </select>
+    <button type="submit">Sort</button>
+</form>
+<table border="1">
+    {% for movie in movies %}
+    <tr class="table">
+        <td><img src="{{ movie.image_url }}" alt="{{ movie.title }}" width="250px" height="300px"></td>
+        <td class="movie_title">{{ movie.title }}</td>
+        <td class="release_year">{{ movie.release_year }}</td>
+        <td class="director">{{ movie.director }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
 </div>
     <button onclick="topFunction()" id="myBtn" title="Go to top">Back to top &#8593;</button>
 
