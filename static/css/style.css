@@ -67,3 +67,9 @@
 header nav {
   background-color: black;
 }
+
+.director_name {
+  font-size: 36px; /* Storlek på texten */
+  font-weight: bold; /* Gör texten fetstilt */
+  color: #333333; /* Färg på texten */
+}
