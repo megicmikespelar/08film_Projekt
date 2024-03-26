@@ -92,6 +92,9 @@ header nav {
 
 }
 .table{
-  margin: 100px;
+  margin: auto;
+  width: 50%;
+  border: 3px solid black;
+  padding: 10px;
 
 }
