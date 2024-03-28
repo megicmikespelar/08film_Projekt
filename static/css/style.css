@@ -3,21 +3,18 @@
 
   position: sticky;
   top: 0;
-  /* Stick to the top */
+  /* gör så knappen sitter fast på toppen */
   margin-right: 10px;
   place-self: end;
   margin-top: calc(100vh + var(--offset));
 
-  /* visual styling */
+  /* visuel Styling */
   text-decoration: none;
   padding: 10px;
   font-family: sans-serif;
   color: #000 !important;
-  /* Change text color to black */
-  background: #fff !important;
-  /* Change background color to white */
+  background: #fff !important;/*inportant gör att det prioriteras över bootsrap*/
   border: 2px solid #000;
-  /* Add black border */
   border-radius: 100px;
   white-space: nowrap;
 }
@@ -62,19 +59,21 @@
   color: black;
   cursor: pointer;
   padding: 10px;
-  border-radius: 10%;
-  font-size: 15px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 10%;/* Radius på border kanten*/
+  font-size: 15px; /*font storlek på texten i knappen*/
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);/* Ger en skugga runt knappen*/
+  
 }
 
 
 #myBtn:hover {
   background-color: #dcdcdc;
-  /* Add a dark-grey background on hover */
+  /* ger en grå färg på hover på knappen */
 }
 
 header nav {
   background-color: black;
+  /*byter färg på bakgrunden i nav-bar*/
 }
 
 .director_name {
