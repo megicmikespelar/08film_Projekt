@@ -10,20 +10,20 @@ function updateButtonVisibility() {
   const showButton = scrollPosition > 400;
   mybutton.style.display = showButton ? "block" : "none";
 
-  // Store the visibility state in local storage
+  // sparar knappens tillstånd 
   localStorage.setItem("showButton", showButton);
 }
 
 function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  document.body.scrollTop = 0; // för safari 
+  document.documentElement.scrollTop = 0; // för andra webbläsare
 }
 
-// Check local storage on page load and update button visibility
+// kollar i localstorage och uppdaterar
 const showButtonFromStorage = localStorage.getItem("showButton") === "true";
 mybutton.style.display = showButtonFromStorage ? "block" : "none";
 
-// Update button visibility on scroll
+// uppdaterar om knappen ska synas eller inte
 window.onscroll = updateButtonVisibility;
 
 
