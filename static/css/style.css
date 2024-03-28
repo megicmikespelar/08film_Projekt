@@ -86,12 +86,14 @@ header nav {
   /* Färg på texten */
 }
 
-.subsection{
-  margin-bottom: 100px;
-  
+.subsection {
+  margin: auto;
+  width: 50%;
 
+  margin-bottom: 50px;
 }
-.table{
+
+.table {
   margin: auto;
   width: 50%;
   border: 3px solid black;
