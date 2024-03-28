@@ -13,6 +13,7 @@ def get_all_movies(sort_by=None):
     conn = get_database_connection()
     cursor = conn.cursor()
 
+    # ger olika select statements beroende på sortering
     if sort_by == 'title':
         cursor.execute('SELECT image_url, title, release_year  FROM Filmer ORDER BY title')
     elif sort_by == 'release_year':
@@ -22,6 +23,7 @@ def get_all_movies(sort_by=None):
     else:
         cursor.execute('SELECT image_url, title, release_year FROM Filmer')
 
+    # delar up bilder och text i olika delar
     movies = []
     for row in cursor.fetchall():
         movies.append({
@@ -31,6 +33,7 @@ def get_all_movies(sort_by=None):
         })
     conn.close()
     return movies
+
 
 def get_all_directors():
     conn = get_database_connection()

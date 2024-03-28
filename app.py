@@ -4,9 +4,9 @@ from database import *
 
 app = Flask(__name__)
 
-@app.route('/')# Variabel som sorterar
+@app.route('/')
 def hello():
-    sort_by = request.args.get('sort_by')# hjälper att sortera
+    sort_by = request.args.get('sort_by')
     data = get_all_movies(sort_by)
     return render_template('index.html', movies=data, sort_by=sort_by)
 
