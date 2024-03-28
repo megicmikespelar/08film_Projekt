@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from database import *
+from database import *  # Importera funktioner från en modul som heter database
 
 
 app = Flask(__name__)
@@ -13,11 +13,11 @@ def hello():
 
 @app.route('/filmer')
 def filmer():
-    return 'Detta är filmsidan.'
+    return 'Detta är filmsidan.' #Returnerar text
 
 @app.route('/skadespelare')
 def skadespelare():
-    return 'Detta är skådespelarsidan.'
+    return 'Detta är skådespelarsidan.' #Returnerar text
 
 @app.route('/directors')
 def directors():
