@@ -53,17 +53,24 @@
 
     </div>
 
+    <!--Filmlistan-->
     <div class="table">
         <h1>Movies</h1>
+        <!--Här väljer man vad man vill sortera med-->
         <form action="/" method="GET">
             Sort by:
             <select name="sort_by">
+                <!--Sortera med titel-->
                 <option value="title" {% if sort_by=='title' %}selected{% endif %}>Title</option>
+                <!--Sortera med release year-->
                 <option value="release_year" {% if sort_by=='release_year' %}selected{% endif %}>Release Year</option>
+                <!--Sortera med rating-->
                 <option value="rating" {% if sort_by=='rating' %}selected{% endif %}>Rating</option>
             </select>
+            <!--Knapp för att genomföra sorteringen-->
             <button type="submit">Sort</button>
         </form>
+        <!--Filmtabellen-->
         <table border="1">
             {% for movie in movies %}
             <tr class="table">
