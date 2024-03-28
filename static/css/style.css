@@ -13,7 +13,8 @@
   padding: 10px;
   font-family: sans-serif;
   color: #000 !important;
-  background: #fff !important;/*inportant gör att det prioriteras över bootsrap*/
+  background: #fff !important;
+  /*inportant gör att det prioriteras över bootsrap*/
   border: 2px solid #000;
   border-radius: 100px;
   white-space: nowrap;
@@ -38,15 +39,6 @@
   /* Färg på texten */
 }
 
-
-
-#myBtn.show {
-  /* Add a class to style the button's position */
-  top: 15px;
-  /* Move button to desired location */
-}
-
-
 #myBtn {
   position: fixed;
   top: 15px;
@@ -59,10 +51,13 @@
   color: black;
   cursor: pointer;
   padding: 10px;
-  border-radius: 10%;/* Radius på border kanten*/
-  font-size: 15px; /*font storlek på texten i knappen*/
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);/* Ger en skugga runt knappen*/
-  
+  border-radius: 10%;
+  /* Radius på border kanten*/
+  font-size: 15px;
+  /*font storlek på texten i knappen*/
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  /* Ger en skugga runt knappen*/
+
 }
 
 
@@ -88,11 +83,11 @@ header nav {
 .subsection {
   margin: auto;
   width: 50%;
-
   margin-bottom: 50px;
 }
 
 .table {
+  /* centerar filmlistan  */
   margin: auto;
   width: 50%;
   border: 3px solid black;
