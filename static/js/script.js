@@ -7,6 +7,8 @@ function getScrollPosition() {
 
 function updateButtonVisibility() {
   const scrollPosition = getScrollPosition();
+
+  // om din skrollposition är över 400 så visas knappen
   const showButton = scrollPosition > 400;
   mybutton.style.display = showButton ? "block" : "none";
 
