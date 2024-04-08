@@ -102,3 +102,14 @@ header nav {
   border: 3px solid black;
   padding: 10px;
 }
+
+.rating_style {
+  font-size: 30px;
+  /* Storlek på texten */
+  font-weight: bold;
+  /* Gör texten fetstilt */
+  color: #333333;
+  /* Färg på texten */
+
+  margin-right: 200px;
+}

@@ -15,13 +15,13 @@ def get_all_movies(sort_by=None):
 
     # ger olika select statements beroende på sortering
     if sort_by == 'title':
-        cursor.execute('SELECT image_url, title, release_year  FROM Filmer ORDER BY title')
+        cursor.execute('SELECT image_url, title, release_year, rating  FROM Filmer ORDER BY title')
     elif sort_by == 'release_year':
-        cursor.execute('SELECT image_url, title, release_year FROM Filmer ORDER BY release_year')
+        cursor.execute('SELECT image_url, title, release_year, rating FROM Filmer ORDER BY release_year')
     elif sort_by == 'rating':
-        cursor.execute('SELECT image_url, title, release_year FROM Filmer')
+        cursor.execute('SELECT image_url, title, release_year, rating FROM Filmer ORDER BY rating DESC')
     else:
-        cursor.execute('SELECT image_url, title, release_year FROM Filmer')
+        cursor.execute('SELECT image_url, title, release_year, rating FROM Filmer')
 
     # delar up bilder och text i olika delar
     movies = []
@@ -29,7 +29,8 @@ def get_all_movies(sort_by=None):
         movies.append({
             "image_url": row[0],
             "title": row[1],
-            "release_year": row[2]
+            "release_year": row[2],
+            "rating": row[3]
         })
     conn.close()
     return movies
