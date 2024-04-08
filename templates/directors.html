@@ -41,16 +41,19 @@
         </nav>
     </header>
 
+    <div class="table_director">
     <!--Direktörtabellen-->
     <table border="1">
         {% for director in directors %}
-        <tr>
+        <tr class="table_director">
             <td> <img src="{{ director.image_url }}" alt="{{ director.Namn }}" width="250px" height="300px"></td>
             <td class="director_name">{{ director.Namn }}</td>
         </tr>
         {% endfor %}
     </table>
 
+    </div>
+    
     <!--Knapp för att komma upp till toppen-->
     <button onclick="topFunction()" id="myBtn" title="Go to top">Back to top &#8593;</button>
 
